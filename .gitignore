@@ -1,0 +1,36 @@
+# Java class files
+*.class
+
+# General files
+*.txt
+*.log
+*.par
+*.tsp
+*.tour
+.DS_Store
+
+# generated files
+bin/
+gen/
+out/
+
+# Eclipse project files
+.classpath
+.project
+proguard/
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Gradle
+.gradle
+gradle/
+build/
+local.properties
+
+# Other files
+benchmark/
+data-*/
