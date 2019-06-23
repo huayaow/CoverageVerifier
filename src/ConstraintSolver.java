@@ -58,7 +58,7 @@ public class ConstraintSolver {
 
     // set at-most constraint
     for (int i = 0; i < parameter; i++) {
-      for (int[] row : CoverageEvaluator.allCombination(value[i], 2)) {
+      for (int[] row : Coverage.allCombination(value[i], 2)) {
         int[] tp = {0 - relation[i][row[0]], 0 - relation[i][row[1]]};
         basicConstraint.add(tp);
       }

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * The method to evaluate the t-way coverage of a given test suite.
  */
-public class CoverageEvaluator {
+public class Coverage {
 
   private int parameter;
   private int[] value;
@@ -26,7 +26,7 @@ public class CoverageEvaluator {
   private ConstraintSolver solver ;
 
 
-  public CoverageEvaluator(int parameter, int[] value, ArrayList<int[]> constraint) {
+  public Coverage(int parameter, int[] value, ArrayList<int[]> constraint) {
     this.parameter = parameter;
     this.value = value;
     this.constraint = constraint;

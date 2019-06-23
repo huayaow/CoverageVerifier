@@ -1,3 +1,5 @@
+import utility.CASAFileReader;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -6,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Verifier {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     System.out.println("-------------------------------------------------------");
-    System.out.println("                 Coverage Evaluator                    ");
+    System.out.println("                 Coverage Verifier                    ");
     System.out.println("-------------------------------------------------------");
     System.out.println("3 - constrained CT experiment data");
     System.out.print("> ");
@@ -63,7 +65,7 @@ public class Main {
 
       // read the model file
       CASAFileReader M = new CASAFileReader(String.format(MODEL_PATH, name), String.format(CONSTRAINT_PATH, name));
-      CoverageEvaluator CE = new CoverageEvaluator(M.parameter, M.value, M.constraint);
+      Coverage CE = new Coverage(M.parameter, M.value, M.constraint);
 
       // read each of the covering array
       List<List<int[]>> all = allArrays(file);
